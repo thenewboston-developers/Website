@@ -15,10 +15,10 @@ const Auth: FC = () => {
       try {
         (async () => {
           const response = await fetchAccessToken(code);
-          console.log(response);
+          console.warn(response);
         })();
       } catch (err) {
-        console.log(err);
+        console.warn(err);
       } finally {
         setFetching(false);
       }
@@ -27,7 +27,7 @@ const Auth: FC = () => {
     }
   }, [code, history]);
 
-  return <h4>{fetching ? 'Fetching access token...' : 'API request complete!'}</h4>;
+  return <h4>{fetching ? 'Fetching access token...' : code}</h4>;
 };
 
 export default Auth;
