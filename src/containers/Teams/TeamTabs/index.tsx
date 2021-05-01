@@ -3,7 +3,8 @@ import {useHistory} from 'react-router';
 import clsx from 'clsx';
 
 import './TeamTabs.scss';
-import {TeamName, TeamTabOptions} from 'types/teams';
+import {allTeamsFilter} from 'constants/teams';
+import {TeamTabOptions} from 'types/teams';
 
 interface ComponentProps {
   team: string;
@@ -16,7 +17,7 @@ const TeamTabs: FC<ComponentProps> = ({team, tab}) => {
 
   const tabs = useMemo(
     () =>
-      team === TeamName.all
+      team === allTeamsFilter.title
         ? [TeamTabOptions.members, TeamTabOptions.resources]
         : [TeamTabOptions.overview, TeamTabOptions.members],
     [team],

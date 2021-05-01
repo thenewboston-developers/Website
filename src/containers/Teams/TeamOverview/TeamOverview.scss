@@ -41,8 +41,10 @@
     }
 
     &-title {
+      align-items: center;
+      display: flex;
       font-size: var(--font-size-small-regular);
-      line-height: 125%;
+      line-height: 30px;
       margin-bottom: 0;
 
       &--sail-gray {

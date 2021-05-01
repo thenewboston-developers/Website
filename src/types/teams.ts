@@ -1,60 +1,37 @@
-export enum TeamName {
-  all = 'All',
-  audit = 'Audit',
-  backEnd = 'Back-End',
-  blockchain = 'Blockchain',
-  community = 'Community',
-  design = 'Design',
-  devOps = 'DevOps',
-  frontEnd = 'Front-End',
-  marketing = 'Marketing',
-}
+import {User} from 'types/app/User';
 
-interface Contributor {
-  contributorId: string;
-  discordUsername: string;
-  displayName: string;
-  githubUsername: string;
-  profileImage: string;
-}
-
-export interface TeamPlatform {
-  label: string;
-  link: string;
-  name: string;
-}
-
-export interface TeamResponsibility {
-  item: string;
-  subitems: string[];
-}
-
-export interface Team {
-  contributors: TeamContributor[];
-  description: string;
-  platforms: TeamPlatform[];
+export type Team = {
+  team_members_meta: TeamMember[];
+  created_date: string;
+  modified_date: string;
+  pk: string;
   title: string;
-  responsibilities: TeamResponsibility[];
-}
+  about: string;
+  responsibilities: string[];
+  github: string;
+  discord: string;
+};
 
-export interface TeamContributor {
-  contributor: Contributor;
-  createdDate: string;
-  isLead: boolean;
-  title: string;
-}
+export type CoreTeam = Omit<Team, 'team_members_meta'> & {
+  core_members_meta: CoreTeamMember[];
+};
 
-export interface TeamMember {
-  contributorId: number;
-  discordUsername: string;
-  displayName: string;
-  githubUsername: string;
-  hourlyRate: number;
-  isLead: boolean;
-  profileImage: string;
-  team: string;
-  title: string;
-}
+export type TeamMember = {
+  is_lead: boolean;
+  job_title: string;
+  pk: string;
+  user: User;
+};
+
+export type CoreTeamMember = TeamMember & {
+  weekly_commitment_hours: number;
+  hourly_rate: number;
+  core_team: string; // foreign key to core team
+};
+
+export type ProjectTeamMember = TeamMember & {
+  project: string;
+};
 
 export interface TeamsUrlParams {
   resource?: string;

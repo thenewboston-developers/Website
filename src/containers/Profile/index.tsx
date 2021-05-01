@@ -55,7 +55,7 @@ const Profile: FC = () => {
   };
 
   if (errorMessage) return <h4>{errorMessage}</h4>;
-  if (loading) return <Loader />;
+  if (loading) return <Loader className="Profile__loader" />;
 
   return (
     <div className="Profile">

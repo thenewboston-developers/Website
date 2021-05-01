@@ -1,15 +1,16 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
 import {Icon, IconType} from '@thenewboston/ui';
 
-import {A, Avatar, CopyableAccountNumber, Qr} from 'components';
+import {api as teamsApi, GetTeamMemberResponse} from 'apis/teams';
+import {A, Avatar, CopyableAccountNumber, Loader, Qr} from 'components';
 import EditUserModal from 'containers/EditUserModal';
 import {useBooleanState} from 'hooks';
 import {selectActiveUser} from 'selectors/state';
 import {User} from 'types/app/User';
-import {TeamMember} from 'types/teams';
-import {getTeamMemberByGithubUsername, getTeamPathname} from 'utils/data';
+import {Team} from 'types/teams';
+import {APIState, INITIAL_API_STATE, APIProgress} from 'types/api';
 
 import './ProfileInfo.scss';
 
@@ -23,9 +24,32 @@ interface ProfileUrlParams {
 
 const ProfileInfo: FC<ComponentProps> = ({user}) => {
   const activeUser = useSelector(selectActiveUser);
-  const memberDetails = getTeamMemberByGithubUsername(user.github_username);
+  const [memberDetails, setMemberDetails] = useState<GetTeamMemberResponse | null>(null);
+  const [team, setTeam] = useState<Team | null>(null);
   const {userId} = useParams<ProfileUrlParams>();
   const [editUserModalIsOpen, toggleEditUserModal] = useBooleanState(false);
+  const [apiState, setAPIState] = useState<APIState>(INITIAL_API_STATE);
+
+  useEffect(() => {
+    async function getTeamMember() {
+      setAPIState({...apiState, progress: APIProgress.REQ});
+      const teamMember = await teamsApi.getTeamMemberByUserId(userId);
+
+      if (!teamMember) {
+        // user is not a team member, skip the rest
+        setAPIState({...apiState, progress: APIProgress.SUCCESS});
+        return;
+      }
+      const originTeam = await teamsApi.getTeamById(teamMember.team);
+      if (originTeam) {
+        setMemberDetails(teamMember);
+        setTeam(originTeam);
+      }
+      setAPIState({...apiState, progress: APIProgress.SUCCESS});
+    }
+    getTeamMember();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const renderBackdrop = (isLead: boolean) => {
     return (
@@ -45,13 +69,14 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
     );
   };
 
-  const renderMemberDetails = (member: TeamMember) => {
-    const {team, title} = member;
+  const renderMemberDetails = () => {
     return (
       <>
-        <div className="ProfileInfo__member-title" key={team}>
-          {title} on <A href={`/teams/${getTeamPathname(team)}`}>{team}</A>
-        </div>
+        {team && memberDetails && (
+          <div className="ProfileInfo__member-title" key={team.title}>
+            {memberDetails.job_title} on <A href={`/teams/${team.title}`}>{team.title}</A>
+          </div>
+        )}
         <div className="ProfileInfo__member-discord">
           <Icon className="ProfileInfo__member-discord-icon" icon={IconType.discord} size={18} />
           {user.discord_username}
@@ -66,17 +91,27 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
     );
   };
 
+  const isLoading = apiState.progress === APIProgress.REQ || apiState.progress === APIProgress.INIT;
+
+  if (isLoading) {
+    return (
+      <div className="ProfileInfo__loader-container">
+        <Loader />
+      </div>
+    );
+  }
+
   return (
     <>
       <div className="ProfileInfo">
         <div className="ProfileInfo__top-section">
-          {renderBackdrop(memberDetails?.isLead || false)}
+          {renderBackdrop(memberDetails?.is_lead || false)}
           <Avatar className="ProfileInfo__profile-picture" size={178} src={user.profile_image} />
         </div>
         <div className="ProfileInfo__details">
           <div className="ProfileInfo__user-details">
             <div className="ProfileInfo__name">{user.display_name}</div>
-            {memberDetails && renderMemberDetails(memberDetails)}
+            {renderMemberDetails()}
           </div>
           {user.account_number && (
             <div className="ProfileInfo__account-details">

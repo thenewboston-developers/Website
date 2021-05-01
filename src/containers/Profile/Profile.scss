@@ -17,6 +17,7 @@
     box-shadow: 0 0 3px rgba(85, 108, 214, 0.3);
     margin: 12px 0 36px 36px;
     padding-bottom: 30px;
+    position: relative;
 
     @media (max-width: 840px) {
       margin: 36px 36px 0 36px;
@@ -26,6 +27,13 @@
       border-radius: 0;
       margin: 0;
     }
+  }
+
+  &__loader {
+    left: 50%;
+    position: absolute;
+    top: 30%;
+    transform: translate(-50%, -30%);
   }
 
   &__right-section {
