@@ -31,6 +31,7 @@ describe('RequestResponseSnippet', () => {
     render(<RequestResponseSnippet {...baseProps} className="Test" heading="Test Heading" />);
 
     expect(screen.getByTestId(baseTestId).className).toContain('Test');
+    console.log('hello');
     expect(screen.getByTestId(headingTestId).className).toContain('Test__heading');
   });
 
