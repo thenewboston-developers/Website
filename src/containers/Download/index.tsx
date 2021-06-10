@@ -70,7 +70,7 @@ const Download: FC = () => {
     () => (
       <ol type="1" className="instruction-container__ol">
         <li className="instruction-container__li">
-          <span className="instruction-container__instruction">Download thenewboston</span>
+          <span className="instruction-container__instruction">Click the "Download" button</span>
         </li>
         <li className="instruction-container__li">
           <span className="instruction-container__instruction">Click on the downloaded file</span>
@@ -92,7 +92,7 @@ const Download: FC = () => {
     () => (
       <ol type="1" className="instruction-container__ol">
         <li className="instruction-container__li">
-          <span className="instruction-container__instruction">Download thenewboston</span>
+          <span className="instruction-container__instruction">Click the "Download" button</span>
         </li>
         <li className="instruction-container__li">
           <span className="instruction-container__instruction">Click on the downloaded file</span>
@@ -115,7 +115,7 @@ const Download: FC = () => {
     () => (
       <ol type="1" className="instruction-container__ol">
         <li className="instruction-container__li">
-          <span className="instruction-container__instruction">Download thenewboston</span>
+          <span className="instruction-container__instruction">Click the "Download" button</span>
         </li>
         <li className="instruction-container__li">
           <span className="instruction-container__instruction">To run thenewboston, make it executable</span>
@@ -182,9 +182,7 @@ const Download: FC = () => {
             <div className="Download__main-background">
               <div className="Download__main-content">
                 <div className="Download__title">Download Wallet</div>
-                <div className="Download__subtitle">
-                  Send and receive TNB coins with thenewboston Free and Secure Wallet
-                </div>
+                <div className="Download__subtitle">Send and receive coins with our free and secure wallet</div>
                 <div className="Download__latest-release">LATEST RELEASE 1.0.0-alpha.{latestReleaseNumber}</div>
                 <div className="Download__buttons-container">
                   <div

@@ -35,9 +35,7 @@ const Feedback: FC = () => {
     <div className="Feedback">
       <div className="Feedback__content">
         <div className="Feedback__title">Send Us Your Feedback</div>
-        <div className="Feedback__subtitle">
-          Do you have a suggestion or found some bug? Let us know in the field below.
-        </div>
+        <div className="Feedback__subtitle">Have a suggestion? Let us know in the form below.</div>
         <Form
           className="Feedback__form"
           initialValues={initialValues}
