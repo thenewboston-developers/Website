@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.0",
-    "@thenewboston/ui": "^0.1.9",
+    "@thenewboston/ui": "^0.1.10",
     "@thenewboston/utils": "^1.0.0",
     "axios": "^0.21.1",
     "clsx": "^1.1.1",
@@ -29,6 +29,7 @@
     "react-select": "^3.1.0",
     "react-syntax-highlighter": "^15.3.0",
     "react-toastify": "^6.0.8",
+    "recharts": "^2.0.9",
     "sass": "^1.32.8",
     "yup": "^0.31.0"
   },

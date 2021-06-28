@@ -23,7 +23,6 @@ import DropdownInput from './DropdownInput';
 import EmptyPage from './EmptyPage';
 import FaqDropdownCard from './FaqDropdownCard';
 import FlatNavLinks from './FlatNavLinks';
-import Footer from './Footer';
 import {Button, ErrorMessage, Input} from './FormElements';
 import GoToTop from './GoToTop';
 import HashLink from './HashLink';
@@ -77,7 +76,6 @@ export {
   ErrorMessage,
   FaqDropdownCard,
   FlatNavLinks,
-  Footer,
   GoToTop,
   HashLink,
   Input,

@@ -1,0 +1,43 @@
+@import 'styles/font-mixins';
+
+$border: 1px solid var(--color-gray-075);
+
+.AnalyticsMobileDropdown {
+  align-items: center;
+  background: var(--color-white);
+  border-bottom: $border;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  cursor: pointer;
+  display: flex;
+  height: 56px;
+  justify-content: space-between;
+  padding: 0 48px;
+
+  @media (max-width: 768px) {
+    padding: 0 24px;
+  }
+
+  &__dropdown {
+    width: calc(100vw - 2 * 24px - 2 * 12px); // subtracting side margin and also padding of popover
+
+    @media (max-width: 576px) {
+      width: calc(100vw - 2 * 8px - 2 * 12px);
+    }
+  }
+
+  &__toggle {
+    transform: rotate(0deg);
+    transition: transform 0.3s;
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__type {
+    @extend %h3;
+    font-weight: var(--font-weight-bold);
+  }
+}

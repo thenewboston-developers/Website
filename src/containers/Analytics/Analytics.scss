@@ -1,0 +1,117 @@
+@import 'styles/font-mixins';
+
+$border: 1px solid var(--color-gray-075);
+$footer-height: 348px;
+$icon-container-height: 78px;
+$top-nav-height: 60px;
+
+.Analytics {
+  display: grid;
+  grid-template-columns: 352px auto;
+  grid-template-rows: [icon-start title-start] 78px [icon-end left-menu-start] 29px [title-end main-start] min-content [left-menu-end main-end];
+
+  @media (max-width: 992px) {
+    grid-template-columns: auto;
+    grid-template-rows: unset;
+  }
+
+  &__icon-container {
+    align-items: center;
+    border-bottom: $border;
+    border-right: $border;
+    display: flex;
+    padding: 0 24px;
+
+    @media (max-width: 992px) {
+      height: 64px;
+      padding: 0 48px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 0 24px;
+    }
+  }
+
+  &__icon-text {
+    font-size: var(--font-size-h3);
+    margin-left: 16px;
+  }
+
+  &__left-menu {
+    border-right: $border;
+    grid-column: 1 / span 1;
+    grid-row: left-menu-start / left-menu-end;
+    min-height: calc(100vh - #{$top-nav-height + $footer-height + $icon-container-height});
+    padding-bottom: 30px;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  &__main-container {
+    display: grid;
+    grid-column: 2 / -1;
+    grid-row: main-start / main-end;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 170px;
+
+    @media (max-width: 992px) {
+      grid-column: unset;
+      grid-row: unset;
+      padding: 0 12px;
+    }
+
+    @media (max-width: 768px) {
+      display: block;
+      padding: 0;
+    }
+  }
+
+  &__title {
+    @extend %display2;
+    display: inline;
+    margin-right: 16px;
+  }
+
+  &__title-container {
+    border-bottom: $border;
+    grid-column: 2 / -1;
+    grid-row: title-start / title-end;
+    padding: 32px;
+
+    @media (max-width: 992px) {
+      grid-column: unset;
+      grid-row: unset;
+      padding: 32px 48px;
+    }
+
+    @media (max-width: 768px) {
+      border-bottom: none;
+      padding: 32px 24px;
+    }
+  }
+
+  &__weekly {
+    color: var(--color-gray-200);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-light);
+  }
+
+  &__wrapper {
+    border-top: $border;
+  }
+
+  .AnalyticsGraph {
+    border-bottom: $border;
+    border-right: $border;
+
+    &:nth-child(even) {
+      border-right: none;
+    }
+
+    @media (max-width: 768px) {
+      border-right: none;
+    }
+  }
+}

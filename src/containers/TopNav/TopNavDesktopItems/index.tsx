@@ -52,6 +52,12 @@ const getStartedPopoverItems: TopNavPopoverItemType[] = [
     title: 'Projects',
     to: '/projects',
   },
+  {
+    description: 'Real time analytics',
+    iconType: IconType.chartAreaspline,
+    title: 'Analytics',
+    to: '/analytics',
+  },
 ];
 
 const resourcesPopoverItems: TopNavPopoverItemType[] = [

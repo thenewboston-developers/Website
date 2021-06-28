@@ -1,7 +1,8 @@
 import React, {FC, ReactNode, useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 
-import {Container, Footer, GoToTop} from 'components';
+import {Container, GoToTop} from 'components';
+import Footer from 'containers/Footer';
 import TopNav from 'containers/TopNav';
 import './Layout.scss';
 

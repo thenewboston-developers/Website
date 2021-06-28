@@ -1,0 +1,16 @@
+@import 'styles/font-mixins';
+
+.AnalyticsGraph {
+  padding: 32px;
+
+  &__graph {
+    background: var(--color-gray-100);
+    height: 225px;
+  }
+
+  &__title {
+    @extend %h3;
+    display: block;
+    margin-bottom: 28px;
+  }
+}

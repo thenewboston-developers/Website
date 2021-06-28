@@ -4,7 +4,7 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import '@testing-library/jest-dom/extend-expect';
 
 import {SocialMedia} from 'types/social-media';
-import Footer from './index';
+import Footer from '.';
 
 interface Props {
   className?: string;

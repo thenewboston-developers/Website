@@ -1,3 +1,5 @@
+@import 'styles/font-mixins';
+
 .FlatNavLinks {
   margin-top: 30px;
   padding: 1px;
@@ -7,7 +9,7 @@
     background: transparent;
     border: 0;
     border-radius: 6px;
-    color: var(--color-sail-gray-400);
+    color: var(--color-gray-500);
     cursor: pointer;
     display: flex;
     font-weight: var(--font-weight-medium);
@@ -18,13 +20,14 @@
     transition: background-color 0.1s;
     width: 100%;
 
-    &:hover {
-      background: var(--color-sail-gray-100);
+    &:hover,
+    &--active {
+      @extend %h4;
+      color: var(--color-blue-900);
     }
 
     &--active {
-      background: var(--color-sail-gray-100);
-      color: var(--color-primary);
+      font-weight: var(--font-weight-bold);
     }
   }
 
