@@ -1,19 +1,9 @@
+@import '../../shared';
+
 .DeveloperPortalLayout {
   &__main-content {
     display: flex;
     flex-direction: row;
-  }
-
-  &__left-content {
-    width: 256px;
-
-    @media (max-width: 1366px) {
-      padding: 32px 48px;
-    }
-
-    @media (max-width: 992px) {
-      display: none;
-    }
   }
 
   &__right-content {
@@ -23,5 +13,10 @@
     @media (max-width: 992px) {
       border-left: none;
     }
+  }
+
+  &__breadcrumb {
+    position: sticky;
+    top: $top-nav-height + $top-links-height;
   }
 }

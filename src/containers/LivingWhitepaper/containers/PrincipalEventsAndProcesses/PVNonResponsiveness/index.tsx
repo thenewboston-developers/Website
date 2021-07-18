@@ -1,9 +1,13 @@
 import React, {FC} from 'react';
 
+import {PrincipalEventsId} from '../../../constants';
+
 const PVNonResponsiveness: FC = () => {
   return (
     <section className="PrincipalEvents__section">
-      <h2 className="PrincipalEvents__section-heading">Handling PV non-responsiveness</h2>
+      <h2 className="PrincipalEvents__section-heading" id={PrincipalEventsId.HandlingPV}>
+        Handling PV non-responsiveness
+      </h2>
       <p className="PrincipalEvents__section-paragraph">
         What happens when the PV intentionally or unintentionally ignores requests from one or more nodes? Here the CVs
         would also need to communicate with one another and switch over to a new PV. What makes this situation more

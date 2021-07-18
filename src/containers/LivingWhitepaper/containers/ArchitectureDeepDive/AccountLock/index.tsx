@@ -2,13 +2,14 @@ import React from 'react';
 
 import {Divider, DocImage} from 'components';
 import AccountLockImage from '../../../assets/AccountLock.svg';
+import {ArchitectureDeepDiveId} from '../../../constants';
 
 import './AccountLock.scss';
 import '../ArchitectureDeepDive.scss';
 
 const AccountLock = () => {
   return (
-    <div className="AccountLock">
+    <div className="AccountLock" id={ArchitectureDeepDiveId.AccountLock}>
       <div className="ArchitectureDeepDive__section-title">Account Lock</div>
       <p className="ArchitectureDeepDive__description">
         Every account on the network has a related account lock, which is a hash value that must be included in all

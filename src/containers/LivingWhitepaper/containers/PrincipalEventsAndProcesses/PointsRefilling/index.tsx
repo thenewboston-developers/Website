@@ -1,13 +1,16 @@
 import React, {FC} from 'react';
 
 import {DataTable, Divider, Note, NoteType} from 'components';
+import {PrincipalEventsId} from '../../../constants';
 
 import './PointsRefilling.scss';
 
 const PointsRefilling: FC = () => {
   return (
     <section className="PrincipalEvents__section">
-      <h2 className="PrincipalEvents__section-heading">Points Refilling</h2>
+      <h2 className="PrincipalEvents__section-heading" id={PrincipalEventsId.PointsRefilling}>
+        Points Refilling
+      </h2>
       <p className="PrincipalEvents__section-paragraph PrincipalEvents__section-paragraph--mb-32">
         Users of the network have the ability to lock any amount of coins that they own. By locking coins, the network
         places a freeze on those coins for a set amount of time to prevent them from being withdrawn. This reduces the

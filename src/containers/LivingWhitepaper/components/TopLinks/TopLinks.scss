@@ -1,4 +1,5 @@
 @import 'styles/font-mixins';
+@import '../../shared';
 
 .TopLinks {
   align-items: center;
@@ -6,6 +7,8 @@
   display: flex;
   height: 72px;
   justify-content: center;
+  position: sticky;
+  top: $top-nav-height;
 
   &__link {
     @extend %body1;

@@ -1,0 +1,56 @@
+@import 'src/styles/mixins';
+@import '../../shared';
+
+.SideMenu {
+  padding: 32px 32px 32px 0;
+  position: sticky;
+  top: $top-nav-height + $top-links-height + $breadcrumbs-height;
+
+  @media (max-width: 1366px) {
+    padding: 32px 48px;
+    width: 256px;
+  }
+
+  @media (max-width: 992px) {
+    display: none;
+  }
+  &__section {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__section-header {
+    @include top-nav-button;
+    display: flex;
+    font-weight: var(--font-weight-medium);
+    justify-content: space-between;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+
+    &--active {
+      color: var(--color-gray-900);
+      font-weight: var(--font-weight-bold);
+    }
+  }
+
+  &__link {
+    color: var(--color-gray-400);
+    cursor: pointer;
+    display: block;
+    font-weight: var(--font-weight-medium);
+
+    &:hover {
+      color: var(--color-blue-gray-1000);
+    }
+
+    &:not(:last-child) {
+      margin: 8px 0;
+    }
+
+    &--active {
+      color: var(--color-gray-900);
+    }
+  }
+}

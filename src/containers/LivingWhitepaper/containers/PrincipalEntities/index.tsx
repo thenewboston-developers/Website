@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 
 import {Divider, Navigation, Note, NoteType} from 'components';
 
+import {PrincipleEntitiesId} from '../../constants';
 import DeveloperPortalLayout from '../../components/DeveloperPortalLayout';
 import AccountsImage from '../../assets/accounts.svg';
 import BudgetsImage from '../../assets/budgets.svg';
@@ -17,7 +18,9 @@ const PrincipalEntities: FC = () => {
       <div className="PrincipalEntities">
         <h6 className="PrincipalEntities__heading">Principal Entities on the Network</h6>
         <section className="PrincipalEntities__section">
-          <h2 className="PrincipalEntities__section-heading">Overview</h2>
+          <h2 className="PrincipalEntities__section-heading" id={PrincipleEntitiesId.Overview}>
+            Overview
+          </h2>
           <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--mb-48">
             This documentation outlines an efficient and scalable peer-to-peer consensus mechanism that allows for
             highly efficient transaction validation within a decentralized network.
@@ -27,7 +30,9 @@ const PrincipalEntities: FC = () => {
             work is duplicated. It is rather the ability to elect fairly a single validation server and consensual
             acceptance of the produced results that require distribution among nodes.
           </p>
-          <h3 className="PrincipalEntities__section-sub-heading">Blockchain Optimizations</h3>
+          <h3 className="PrincipalEntities__section-sub-heading" id={PrincipleEntitiesId.BlockchainOptimizations}>
+            Blockchain Optimizations
+          </h3>
           <p className="PrincipalEntities__section-paragraph">
             Regarding the creation of a distributed public ledger, there are several key differences between
             thenewboston network structure and traditional Blockchain architectures.
@@ -53,7 +58,9 @@ const PrincipalEntities: FC = () => {
         </section>
         <Divider className="PrincipalEntities__divider" />
         <section className="PrincipalEntities__section">
-          <h2 className="PrincipalEntities__section-heading">Account</h2>
+          <h2 className="PrincipalEntities__section-heading" id={PrincipleEntitiesId.Account}>
+            Account
+          </h2>
           <p className="PrincipalEntities__section-paragraph">
             Accounts are anonymous digital identities on the network where coins can be sent to and from.
             <br />
@@ -134,7 +141,9 @@ const PrincipalEntities: FC = () => {
         </section>
         <Divider className="PrincipalEntities__divider" />
         <section className="PrincipalEntities__section">
-          <h2 className="PrincipalEntities__section-heading">Nodes</h2>
+          <h2 className="PrincipalEntities__section-heading" id={PrincipleEntitiesId.Nodes}>
+            Nodes
+          </h2>
           <p className="PrincipalEntities__section-paragraph">
             The network uses multiple nodes, which are servers with several responsibilities. Nodes connect users or
             client apps to the network, or enable important processes, such as transaction validation.
@@ -162,7 +171,9 @@ const PrincipalEntities: FC = () => {
         </section>
         <Divider className="PrincipalEntities__divider" />
         <section className="PrincipalEntities__section">
-          <h2 className="PrincipalEntities__section-heading">Blocks and Blockchain</h2>
+          <h2 className="PrincipalEntities__section-heading" id={PrincipleEntitiesId.BlocksAndBlockchain}>
+            Blocks and Blockchain
+          </h2>
           <p className="PrincipalEntities__section-paragraph">
             <span className="PrincipalEntities__section-text--highlight">Blocks</span> are structures that store data.
             These data describe changes to the network and originate from signed change requests, such as:
@@ -179,7 +190,9 @@ const PrincipalEntities: FC = () => {
         </section>
         <Divider className="PrincipalEntities__divider" />
         <section className="PrincipalEntities__section">
-          <h2 className="PrincipalEntities__section-heading">Validators</h2>
+          <h2 className="PrincipalEntities__section-heading" id={PrincipleEntitiesId.Validators}>
+            Validators
+          </h2>
           <p className="PrincipalEntities__section-paragraph">
             <span className="PrincipalEntities__section-text--highlight">Validators</span> are elected nodes that handle
             the validation of data and the generation of blocks that are added to the blockchain.
@@ -187,7 +200,9 @@ const PrincipalEntities: FC = () => {
         </section>
         <Divider className="PrincipalEntities__divider" />
         <section className="PrincipalEntities__section">
-          <h2 className="PrincipalEntities__section-heading">Node Roles</h2>
+          <h2 className="PrincipalEntities__section-heading" id={PrincipleEntitiesId.NodeRoles}>
+            Node Roles
+          </h2>
           <p className="PrincipalEntities__section-paragraph">Nodes perform one of these roles:</p>
           <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--mb-8 PrincipalEntities__section-text--black">
             Regular node
@@ -246,7 +261,9 @@ const PrincipalEntities: FC = () => {
         </section>
         <Divider className="PrincipalEntities__divider" />
         <section className="PrincipalEntities__section">
-          <h2 className="PrincipalEntities__section-heading">Locked Coins and Boosts</h2>
+          <h2 className="PrincipalEntities__section-heading" id={PrincipleEntitiesId.LockedCoinsAndBoosts}>
+            Locked Coins and Boosts
+          </h2>
           <p className="PrincipalEntities__section-paragraph">
             Users of the network can lock any amount of coins that they own. By locking coins, the network places a
             freeze on those coins for a set amount of time to prevent them from being withdrawn. This reduces the amount
@@ -291,7 +308,9 @@ const PrincipalEntities: FC = () => {
         </section>
         <Divider className="PrincipalEntities__divider" />
         <section className="PrincipalEntities__section">
-          <h2 className="PrincipalEntities__section-heading">Coins vs. Points</h2>
+          <h2 className="PrincipalEntities__section-heading" id={PrincipleEntitiesId.CoinsVsPoints}>
+            Coins vs. Points
+          </h2>
           <p className="PrincipalEntities__section-paragraph">
             The value of thenewboston coins will increase as the community develops more apps for our network. All apps,
             however, require user interaction. Some common app interactions include leaving comments, sending messages,
@@ -342,7 +361,9 @@ const PrincipalEntities: FC = () => {
         </section>
         <Divider className="PrincipalEntities__divider" />
         <section className="PrincipalEntities__section">
-          <h2 className="PrincipalEntities__section-heading">Governance</h2>
+          <h2 className="PrincipalEntities__section-heading" id={PrincipleEntitiesId.Governance}>
+            Governance
+          </h2>
           <p className="PrincipalEntities__section-paragraph">
             Our governance structure enables <span className="PrincipalEntities__section-text--highlight">voting</span>{' '}
             for all core aspects of the network. The network stores all votes on the chain.{' '}
@@ -401,7 +422,9 @@ const PrincipalEntities: FC = () => {
         </section>
         <Divider className="PrincipalEntities__divider" />
         <section className="PrincipalEntities__section">
-          <h2 className="PrincipalEntities__section-heading">Budget</h2>
+          <h2 className="PrincipalEntities__section-heading" id={PrincipleEntitiesId.Budget}>
+            Budget
+          </h2>
           <p className="PrincipalEntities__section-paragraph">
             The existing / alpha Treasury will be burnt in favor of an updated minting process by the Treasury Board.
             Minted coins will be deposited to the budget account which is collectively managed by all members of the
@@ -420,7 +443,9 @@ const PrincipalEntities: FC = () => {
         </section>
         <Divider className="PrincipalEntities__divider" />
         <section className="PrincipalEntities__section">
-          <h2 className="PrincipalEntities__section-heading">Fees</h2>
+          <h2 className="PrincipalEntities__section-heading" id={PrincipleEntitiesId.Fees}>
+            Fees
+          </h2>
           <p className="PrincipalEntities__section-paragraph">
             Through the collection of fees individuals receive rewards for maintaining nodes on the network. Users pay
             these fees to their connection node in exchange for the processing of their requests.
@@ -439,7 +464,9 @@ const PrincipalEntities: FC = () => {
         </section>
         <Divider className="PrincipalEntities__divider" />
         <section className="PrincipalEntities__section">
-          <h2 className="PrincipalEntities__section-heading">Glossary of Main Entities</h2>
+          <h2 className="PrincipalEntities__section-heading" id={PrincipleEntitiesId.Glossary}>
+            Glossary of Main Entities
+          </h2>
           <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--mt-32 PrincipalEntities__section-paragraph--mb-8  PrincipalEntities__section-text--black">
             Account
           </p>

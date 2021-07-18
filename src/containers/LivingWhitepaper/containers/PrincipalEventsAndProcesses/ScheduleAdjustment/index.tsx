@@ -1,11 +1,14 @@
 import React, {FC} from 'react';
 
+import {PrincipalEventsId} from '../../../constants';
 import ScheduleAdjustmentImage from '../../../assets/schedule-adjustment.svg';
 
 const ScheduleAdjustment: FC = () => {
   return (
     <section className="PrincipalEvents__section">
-      <h2 className="PrincipalEvents__section-heading">Schedule Adjustment</h2>
+      <h2 className="PrincipalEvents__section-heading" id={PrincipalEventsId.ScheduleAdjustment}>
+        Schedule Adjustment
+      </h2>
       <p className="PrincipalEvents__section-paragraph">
         At the end of their turn, the responsibility of being PV transitions to the next validator on the validator
         schedule. Because each validator can only generate blocks as PV during their scheduled time, the CVs deem as

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {Divider, DocImage, Note, NoteType} from 'components';
+import {ArchitectureDeepDiveId} from '../../../constants';
 import HaltRequestedImage from '../../../assets/HaltRequested.svg';
 import BlockchainHaltedImage from '../../../assets/BlockchainHalted.svg';
 import LongestBlockchainImage from '../../../assets/LongestBlockchain.svg';
@@ -11,7 +12,7 @@ import '../ArchitectureDeepDive.scss';
 
 const ConsensusCV = () => {
   return (
-    <div className="ConsensusCV">
+    <div className="ConsensusCV" id={ArchitectureDeepDiveId.Consensus}>
       <div className="ArchitectureDeepDive__section-title">Consensus between Confirmation Validators</div>
       <p className="ArchitectureDeepDive__description">
         The decision of whether or not to skip a PV is determined by consensus between the CVs. This process happens

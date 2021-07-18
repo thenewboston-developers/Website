@@ -1,13 +1,16 @@
 import React, {FC} from 'react';
 
 import {DataTable} from 'components';
+import {PrincipalEventsId} from '../../../constants';
 
 import './Overview.scss';
 
 const Overview: FC = () => {
   return (
     <section className="PrincipalEvents__section">
-      <h2 className="PrincipalEvents__section-heading">Overview</h2>
+      <h2 className="PrincipalEvents__section-heading" id={PrincipalEventsId.Overview}>
+        Overview
+      </h2>
       <DataTable
         className="Overview"
         columns={['Process / Event', 'Description']}

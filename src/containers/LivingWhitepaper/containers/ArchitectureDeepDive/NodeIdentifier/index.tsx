@@ -1,13 +1,14 @@
 import React from 'react';
 
 import {CodeSnippet, Divider, DocImage, SnippetLang} from 'components';
+import {ArchitectureDeepDiveId} from '../../../constants';
 import NodeIdentifiersImage from '../../../assets/NodeIdentifiers.svg';
 
 import '../ArchitectureDeepDive.scss';
 
 const NodeIdentifier = () => {
   return (
-    <div className="NodeIdentifier">
+    <div className="NodeIdentifier" id={ArchitectureDeepDiveId.NodeIdentifier}>
       <div className="ArchitectureDeepDive__section-title">Node Identifier</div>
       <p className="ArchitectureDeepDive__description">
         The node identifier (NID) system is a separate key-pair that nodes use for signing requests to other nodes.
@@ -20,7 +21,9 @@ const NodeIdentifier = () => {
         system also provides an additional benefit in allowing requests to be sent on behalf of the node maintainer
         without requiring the request to originate from the node itself.
       </p>
-      <div className="ArchitectureDeepDive__topic-heading">Sample Request and Response</div>
+      <div className="ArchitectureDeepDive__topic-heading" id={ArchitectureDeepDiveId.SampleRequestAndResponse}>
+        Sample Request and Response
+      </div>
       <p className="ArchitectureDeepDive__description">
         An example of where this is useful is during the connection request process. A sample connection request body
         follows:

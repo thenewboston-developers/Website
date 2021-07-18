@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 
 import {Divider, Note, NoteType} from 'components';
+import {PrincipalEventsId} from '../../../constants';
 
 import ForkPrevention1Image from '../../../assets/fork-prevention-1.svg';
 import ForkPrevention2Image from '../../../assets/fork-prevention-2.svg';
@@ -10,7 +11,9 @@ import ForkPreventionAlt3Image from '../../../assets/fork-prevention-alt-3.svg';
 const ForkPrevention: FC = () => {
   return (
     <section className="PrincipalEvents__section">
-      <h2 className="PrincipalEvents__section-heading">Fork Prevention and Validation Threshold</h2>
+      <h2 className="PrincipalEvents__section-heading" id={PrincipalEventsId.ForkPrevention}>
+        Fork Prevention and Validation Threshold
+      </h2>
       <p className="PrincipalEvents__section-paragraph">
         Every CV informs all other CVs when a block has been received from the PV. This is to secure the network against
         the unlikely event of a malicious PV attempting to fork the network by sending multiple versions of the same

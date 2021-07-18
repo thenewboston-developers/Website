@@ -1,13 +1,14 @@
 import React from 'react';
 
 import {Divider} from 'components';
+import {ArchitectureDeepDiveId} from '../../../constants';
 
 import './FAQ.scss';
 import '../ArchitectureDeepDive.scss';
 
 const FAQ = () => {
   return (
-    <div className="FAQ">
+    <div className="FAQ" id={ArchitectureDeepDiveId.Faq}>
       <div className="ArchitectureDeepDive__section-title">FAQs</div>
       <div className="ArchitectureDeepDive__emphasized-text">
         How does the governance model shield the chain against bad actors?

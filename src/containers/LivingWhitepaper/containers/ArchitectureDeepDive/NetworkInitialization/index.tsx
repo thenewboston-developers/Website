@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {Divider, DocImage} from 'components';
+import {ArchitectureDeepDiveId} from '../../../constants';
 import GenesisBlockImage from '../../../assets/GenesisBlock.svg';
 import GenesisBlockCompositionImage from '../../../assets/GenesisBlockComposition.svg';
 import BlockChangeImage from '../../../assets/BlockChange.svg';
@@ -9,7 +10,7 @@ import '../ArchitectureDeepDive.scss';
 
 const NetworkInitialization = () => {
   return (
-    <div className="NetworkInitialization">
+    <div className="NetworkInitialization" id={ArchitectureDeepDiveId.NetworkInitialization}>
       <div className="ArchitectureDeepDive__section-title">Network Initialization</div>
       <p className="ArchitectureDeepDive__description">
         The beta network is initialized from a single node and the blockchain genesis state. This is the state of the

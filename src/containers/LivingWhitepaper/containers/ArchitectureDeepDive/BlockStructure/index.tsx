@@ -1,13 +1,14 @@
 import React from 'react';
 
 import {Divider, DocImage} from 'components';
+import {ArchitectureDeepDiveId} from '../../../constants';
 import BlockStructureImage from '../../../assets/BlockStructure.svg';
 
 import '../ArchitectureDeepDive.scss';
 
 const BlockStructure = () => {
   return (
-    <div className="BlockStructure">
+    <div className="BlockStructure" id={ArchitectureDeepDiveId.BlockStructure}>
       <div className="ArchitectureDeepDive__section-title">Block Structure</div>
       <p className="ArchitectureDeepDive__description">
         All blocks follow the same general structure. This structure provides a clear description of change to one or
@@ -28,7 +29,9 @@ const BlockStructure = () => {
       <p className="ArchitectureDeepDive__description">Resulting changes to one or more objects</p>
       <DocImage alt="Block Structure" maxWidth={479} src={BlockStructureImage} />
 
-      <div className="ArchitectureDeepDive__topic-heading">Signed Change Request Fields</div>
+      <div className="ArchitectureDeepDive__topic-heading" id={ArchitectureDeepDiveId.SignedChangeRequest}>
+        Signed Change Request Fields
+      </div>
       <ul className="ArchitectureDeepDive__points">
         <li className="ArchitectureDeepDive__point">
           <span className="ArchitectureDeepDive__emphasized-text">Type</span> - Type of the signed change request
@@ -57,7 +60,9 @@ const BlockStructure = () => {
         </li>
       </ul>
 
-      <div className="ArchitectureDeepDive__topic-heading">Message Fields</div>
+      <div className="ArchitectureDeepDive__topic-heading" id={ArchitectureDeepDiveId.MessageFields}>
+        Message Fields
+      </div>
       <ul className="ArchitectureDeepDive__points">
         <li className="ArchitectureDeepDive__point">
           <span className="ArchitectureDeepDive__emphasized-text">Account Lock</span> - Unique value used to ensure that

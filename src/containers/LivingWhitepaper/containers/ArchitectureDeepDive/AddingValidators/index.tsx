@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {Divider, DocImage} from 'components';
+import {ArchitectureDeepDiveId} from '../../../constants';
 import PVInitProcessImage from '../../../assets/PVInitializationProcess.svg';
 import PVInitProcessMultipleCandidatesImage from '../../../assets/PVInitializationProcessMultipleCandidates.svg';
 import ScheduleGenerationImage from '../../../assets/ScheduleGeneration.svg';
@@ -11,7 +12,7 @@ import '../ArchitectureDeepDive.scss';
 
 const AddingValidators = () => {
   return (
-    <div className="AddingValidators">
+    <div className="AddingValidators" id={ArchitectureDeepDiveId.AddingValidators}>
       <div className="ArchitectureDeepDive__section-title">Adding Validators to the Schedule</div>
       <p className="ArchitectureDeepDive__description">
         The goal of this process is to add more validators to the schedule to ensure that the network will always have a

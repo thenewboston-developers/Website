@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 
 import {Note, NoteType} from 'components';
+import {PrincipalEventsId} from '../../../constants';
 
 import ConfirmationProcessImage from '../../../assets/confirmation-process.svg';
 import NetworkFlowImage from '../../../assets/network-flow.svg';
@@ -8,7 +9,9 @@ import NetworkFlowImage from '../../../assets/network-flow.svg';
 const DataFlows: FC = () => {
   return (
     <section className="PrincipalEvents__section">
-      <h2 className="PrincipalEvents__section-heading">Data Flows</h2>
+      <h2 className="PrincipalEvents__section-heading" id={PrincipalEventsId.DataFlows}>
+        Data Flows
+      </h2>
       <p className="PrincipalEvents__section-paragraph PrincipalEvents__section-paragraph--mb-32">
         Most data flows originate from user requests on the network, with the most common being the transfer of coins.
       </p>
@@ -42,7 +45,9 @@ const DataFlows: FC = () => {
           The connection node returns a message to the user when the user request is confirmed or rejected.
         </li>
       </ol>
-      <h3 className="PrincipalEvents__section-sub-heading">Validator Data Flow</h3>
+      <h3 className="PrincipalEvents__section-sub-heading" id={PrincipalEventsId.ValidatorDataFlow}>
+        Validator Data Flow
+      </h3>
       <p className="PrincipalEvents__section-paragraph">
         The primary duty of PVs is to check all data originating from user signed change requests. Only PVs can create
         blocks and every block has three principal parts:
@@ -94,7 +99,9 @@ const DataFlows: FC = () => {
         that there is a majority consensus regarding the data. The Government will consider that percentage to be
         irreversible.
       </p>
-      <h3 className="PrincipalEvents__section-sub-heading">Network Data Flow</h3>
+      <h3 className="PrincipalEvents__section-sub-heading" id={PrincipalEventsId.NetworkDataFlow}>
+        Network Data Flow
+      </h3>
       <p className="PrincipalEvents__section-paragraph">
         Focusing on how the network handles data flows for user requests, the general process is the following:
       </p>

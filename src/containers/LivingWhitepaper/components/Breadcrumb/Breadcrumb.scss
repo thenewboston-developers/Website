@@ -1,17 +1,26 @@
+@import 'src/styles/mixins';
 @import 'styles/font-mixins';
+@import '../../shared';
 
 .Breadcrumb {
   align-items: center;
+  background-color: white;
   display: flex;
   flex-wrap: wrap;
-  min-height: 56px;
+  height: $breadcrumbs-height;
 
   @media (max-width: 1366px) {
     padding: 0 48px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     padding: 12px 24px;
+  }
+
+  @media (max-width: 768px) {
+    // have to hard code it to two rows for now in order to accurately
+    // estimate the height for react-scroll
+    height: $breadcrumbs-height * 2;
   }
 
   &__link-container {
@@ -28,14 +37,45 @@
     @extend %h4;
     color: var(--color-gray-400);
     line-height: 14px; // allow text to be centered by setting line-height to be the same as font size
+    text-align: left;
 
     &--active {
       color: var(--color-gray-600);
       font-weight: var(--font-weight-medium);
+      text-align: left;
     }
   }
 
   &__icon {
     margin: 0 8px;
+  }
+
+  &__button {
+    @include top-nav-button;
+    display: flex;
+    padding-left: 0;
+  }
+
+  &__Popover {
+    padding: 16px;
+    width: 240px;
+
+    &-link {
+      color: var(--color-gray-500);
+      cursor: pointer;
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      &:hover {
+        color: var(--color-blue-gray-1000);
+      }
+
+      &--active {
+        color: var(--color-gray-900);
+      }
+    }
   }
 }
