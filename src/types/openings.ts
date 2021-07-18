@@ -6,7 +6,7 @@ export interface Opening {
   position: string;
   project?: ProjectProposal;
   responsibilities: string[];
-  technologyRequirements: string[];
+  requirements: string[];
 }
 
 export enum OpeningCategory {

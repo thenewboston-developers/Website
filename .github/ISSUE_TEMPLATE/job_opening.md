@@ -22,7 +22,7 @@ Write a few sentences describing the position here.
 - b
 - c
 
-#### Technology Requirements
+#### Requirements
 - a
 - b
 - c

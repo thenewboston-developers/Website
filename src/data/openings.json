@@ -9,7 +9,7 @@
       "Leverage native APIs for deep integrations with both platforms.",
       "Maintain code and write automated tests to ensure the product is of the highest quality."
     ],
-    "technologyRequirements": [
+    "requirements": [
       "Firm grasp of the JavaScript and its nuances, including ES6+ syntax",
       "Knowledge of functional or object-oriented programming",
       "Understanding of REST APIs, the document request model, and offline storage",
@@ -29,7 +29,7 @@
       "Participating in architectural, design and product discussions",
       "Working in an environment with an excellent team of engineers"
     ],
-    "technologyRequirements": [
+    "requirements": [
       "Experience with Celery, DRF, and pytest",
       "2+ years of experience in Django",
       "4+ years of experience in Python"
@@ -49,7 +49,7 @@
       "Develops and maintains detailed user interface specifications.",
       "Presents design work to multiple teams and senior leadership for review and feedback."
     ],
-    "technologyRequirements": [
+    "requirements": [
       "Fluency in best practices for web-based information architecture and design.",
       "Strong knowledge of usability principles and techniques.",
       "Excellent communication and presentation.",
@@ -76,7 +76,7 @@
       "Using a variety of methods to interview candidates.",
       "You will contribute to the development of a solid tech talent pipeline by assisting in the hiring and retention of qualified workers for our IT positions."
     ],
-    "technologyRequirements": [
+    "requirements": [
       "Working as a Technical Recruiter in the past is a plus.",
       "Solid technical background needed to understand as well as explain requirements for IT-related jobs.",
       "Expertise in a variety of sourcing techniques.",
@@ -102,7 +102,7 @@
       "Assisting team leads with the onboarding process.",
       "Overseeing the creation of the new recruiting team."
     ],
-    "technologyRequirements": ["Leadership abilities", "Familiar with Github", "Knowledgeable with Gsuite"],
+    "requirements": ["Leadership abilities", "Familiar with Github", "Knowledgeable with Gsuite"],
     "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
   },
   {
@@ -117,7 +117,7 @@
       "Create reports on marketing performance",
       "Work with the marketing team to manage brand and marketing initiatives"
     ],
-    "technologyRequirements": ["Gsuite", "Marketing tools", "Familiar with all social media"],
+    "requirements": ["Gsuite", "Marketing tools", "Familiar with all social media"],
     "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
   },
   {
@@ -134,7 +134,7 @@
       "Write compelling and high-quality website content, including blog posts and page descriptions",
       "Update content and website links for maximum optimization and search engine rankings"
     ],
-    "technologyRequirements": [
+    "requirements": [
       "3+ years of experience in successfully developing and executing SEO campaigns",
       "Understanding of search engine algorithms and ranking methods",
       "Experience with SEO industry programs, such as Google Analytics",
@@ -159,7 +159,7 @@
       "Review the Group page analytics and Improved marketing strategy.",
       "Communicate and Engage with thenewboston Community."
     ],
-    "technologyRequirements": ["Social Media Marketing tools", "G-suite"],
+    "requirements": ["Social Media Marketing tools", "G-suite"],
     "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
   }
 ]

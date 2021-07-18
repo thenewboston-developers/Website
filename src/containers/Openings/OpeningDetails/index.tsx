@@ -36,7 +36,7 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
       )}
       <div className="OpeningDetails__description">{opening.description}</div>
       {renderStringList(opening.responsibilities, 'Responsibilities')}
-      {renderStringList(opening.technologyRequirements, 'Technology Requirements')}
+      {renderStringList(opening.requirements, 'Requirements')}
     </>
   );
 
