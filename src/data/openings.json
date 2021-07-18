@@ -106,21 +106,6 @@
     "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
   },
   {
-    "openingId": "marketing-specialist",
-    "category": "Marketing",
-    "description": "The Marketing Team is looking for a responsible Marketing Specialist that will help us with our daily tasks that keep the department functioning and facilitate the duties of the Head of Marketing.",
-    "position": "Marketing Specialist",
-    "responsibilities": [
-      "Administrative duties",
-      "Drive traffic from social media",
-      "Execute marketing strategy",
-      "Create reports on marketing performance",
-      "Work with the marketing team to manage brand and marketing initiatives"
-    ],
-    "technologyRequirements": ["Gsuite", "Marketing tools", "Familiar with all social media"],
-    "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
-  },
-  {
     "openingId": "senior-seo-specialist",
     "category": "Marketing",
     "description": "We are looking for a talented Senior SEO Specialist to join our team.",
@@ -147,10 +132,41 @@
     "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
   },
   {
-    "openingId": "marketing-strategy-specialist",
+    "openingId": "marketing-specialist",
+    "category": "Marketing",
+    "description": "The Marketing Team is looking for a responsible Marketing Specialist that will help us with our daily tasks that keep the department functioning and facilitate the duties of the Head of Marketing.",
+    "position": "Marketing Specialist",
+    "responsibilities": [
+      "Administrative duties",
+      "Drive traffic from social media",
+      "Execute marketing strategy",
+      "Create reports on marketing performance",
+      "Work with the marketing team to manage brand and marketing initiatives"
+    ],
+    "technologyRequirements": ["Gsuite", "Marketing tools", "Familiar with all social media"],
+    "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
+  },
+  {
+    "openingId": "marketing-specialist-india",
+    "category": "Marketing",
+    "description": "Marketing Team is looking for Marketing Specialist from India to represent thenewboston policies and values in their home region and encourage people around the world to contribute and earn our coins.",
+    "position": "Marketing Specialist from India",
+    "responsibilities": [
+      "Submit a Bi-weekly Marketing Strategy that explains how you are going to promote thenewboston in facebook Group page.",
+      "Create a Weekly Social Media Marketing Plan.",
+      "Engage with your audience and encourage them to join in our community.",
+      "Working with a team to discuss marketing ideas.",
+      "Review the Group page analytics and Improved marketing strategy.",
+      "Communicate and Engage with thenewboston Community."
+    ],
+    "technologyRequirements": ["Social Media Marketing tools", "G-suite"],
+    "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
+  },
+  {
+    "openingId": "marketing-specialist-nigeria",
     "category": "Marketing",
     "description": "Marketing Team is looking for Marketing Specialist from Nigeria to represent thenewboston policies and values in their home region and encourage people around the world to contribute and earn our coins.",
-    "position": "Marketing Specialist",
+    "position": "Marketing Specialist from Nigeria",
     "responsibilities": [
       "Submit a Bi-weekly Marketing Strategy that explains how you are going to promote thenewboston in facebook Group page.",
       "Create a Weekly Social Media Marketing Plan.",
